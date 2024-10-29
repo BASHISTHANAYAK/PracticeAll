@@ -1,0 +1,31 @@
+#slider_Container {
+  border: 1px solid red;
+  width: 60vw;
+  height: 500px;
+  margin: auto;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+#slider_Container > img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  object-fit: cover;
+  transition:all 1s;
+}
+
+/* button_Container */
+
+#button_Container {
+  display: flex;
+  width: 300px;
+  margin: auto;
+  justify-content: center;
+  gap: 30px;
+}
+#button_Container > button {
+  display: block;
+  padding: 10px 20px;
+  cursor: pointer;
+}
