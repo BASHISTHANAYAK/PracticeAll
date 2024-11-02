@@ -1,0 +1,6 @@
+main {
+  /* flex: 1; Makes main take available space, pushing footer down */
+  border: 2px solid wheat;
+  background-color: blue;
+  padding: 10px;
+}

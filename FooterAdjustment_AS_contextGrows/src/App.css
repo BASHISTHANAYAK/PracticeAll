@@ -1,0 +1,42 @@
+/* Make sure html and #root take full height */
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+} 
+
+/* Use .app as the main flex container */
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* Minimum height to cover the viewport */
+}
+
+
+
+/* For WebKit browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+  width: 3px; /* Set the scrollbar width to 3px */
+}
+
+::-webkit-scrollbar-track {
+  background: transparent; /* Make the track invisible */
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(136, 136, 136, 0.5); /* Thinner, semi-transparent thumb */
+  border-radius: 10px; /* Round edges for a smoother look */
+}
+
+/* Thumb hover state */
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(136, 136, 136, 0.8); /* Darken thumb on hover */
+}
+
+/* Remove the scrollbar buttons (arrows) */
+::-webkit-scrollbar-button {
+  display: none; /* Hide buttons on both ends */
+}
