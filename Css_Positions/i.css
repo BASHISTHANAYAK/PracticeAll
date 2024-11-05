@@ -19,3 +19,9 @@ nav {
   position: sticky;
   top: 0px;
 }
+.child{
+    border: 1px solid red;
+    height: 200px;
+  line-height: 200px; /* Set line-height equal to container height */
+  text-align: center; /* Center text horizontally */
+   }
