@@ -1,0 +1,21 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: aqua;
+}
+nav {
+  border: 2px solid red;
+  padding: 40px;
+  background-color: blue;
+  color: white;
+}
+.sticky {
+  border: 2px solid yellowgreen;
+  padding: 40px;
+  background-color: blue;
+  color: red;
+  margin-top: 100px;
+  position: sticky;
+  top: 0px;
+}
