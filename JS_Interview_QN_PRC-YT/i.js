@@ -86,6 +86,7 @@
 // arr.unshift(56);
 // console.log(arr);
 // console.log(res);
+
 // *********************************************
 
 // function currying is a technique to dive multiple arguments into each functions and each function returns a result so that we combine these results to achive a desired results.
@@ -124,13 +125,15 @@
 
 // infinate function currying
 
-// function infinateFun(a) {
-//   return function innerFun(b) {
-//     if (b == undefined) {
-//       return a + b;
-//     } else {
-//       return infinateFun(a);
-//     }
-//   };
-// }
-// console.log(infinateFun(2)(3)());
+function infinateFun(a) {
+  return function innerFun(b) {
+    if (b !== undefined) {
+      return infinateFun(a + b);
+    } else {
+      return a;
+    }
+  };
+}
+console.log(infinateFun(2)(3)());
+
+// *********************************************
