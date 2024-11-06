@@ -19,8 +19,11 @@ function App() {
       if (obj.id == id) {
         return { ...obj, className: "changeCss" };
       } else {
-        const { className, ...details } = obj;
-        return details;
+        // const { className, ...details } = obj;
+        // return details;
+        // or
+        delete obj.className;
+        return obj;
       }
     });
     setColors(() => newMap);
