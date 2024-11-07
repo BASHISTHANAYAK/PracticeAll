@@ -1,6 +1,9 @@
 const express = require("express");
 const app = express();
 
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
 // adding a simple middleware
 app.use(function (req, res, next) {
   console.log("passed by middleware ...");
@@ -14,7 +17,7 @@ app.get("/", function (req, res) {
 //creatingn  a /about route
 app.get("/about", function (req, res, next) {
   //   res.send("This is /about page.");
-  return next(new Error("Error in /about page please check.")); 
+  return next(new Error("Error in /about page please check."));
 });
 
 // Error handling
