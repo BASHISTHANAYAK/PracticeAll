@@ -1,0 +1,8 @@
+
+
+textarea {
+    width:60%;    /* Full width of the container */
+    height: 100px;  /* Fixed height */
+    resize: vertical;
+  }
+  

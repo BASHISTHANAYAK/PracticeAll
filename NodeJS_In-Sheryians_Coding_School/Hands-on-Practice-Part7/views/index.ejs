@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="/styless/index.css">
+</head>
+
+<body>
+  <form action="/create" method="post">
+    <section>
+      <label for="title">Titile goes here</label>
+      <input type="text" id="title" name="title">
+    </section>
+    <section>
+      <label for="textarea">Write your task details Here</label>
+      <br>
+      <textarea name="details" id="textarea"></textarea>
+    </section>
+    <button type="submit">submit</button>
+  </form>
+
+  <div>
+    <h4>Task Area</h4>
+    <hr>
+    <% if(files.length==0){ %>
+      <h5>No tasks Here.</h5>
+      <% } else { %>
+        <% files.forEach((el)=>{ %>
+          <h1>some data</h1>
+          <% }) %>
+            <% } %>
+  </div>
+</body>
+
+</html>
