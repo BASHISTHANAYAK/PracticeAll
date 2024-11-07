@@ -12,8 +12,13 @@ app.get("/", function (req, res) {
 });
 
 app.get("/bashistha/:userName", function (req, res) {
-    let user = req.params.userName
+  let user = req.params.userName;
   res.send(`welcome ${user}`);
+});
+
+app.get("/author/:Name/:age", function (req, res) {
+  let { Name, age } = req.params;
+  res.send(`welcome ${Name}, your's age is ${age}`);
 });
 
 app.listen(3000, function () {
