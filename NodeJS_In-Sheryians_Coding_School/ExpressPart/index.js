@@ -12,7 +12,14 @@ app.get("/", function (req, res) {
 });
 
 //creatingn  a /about route
-app.get("/about", function (req, res) {
-  res.send("This is /about page.");
+app.get("/about", function (req, res, next) {
+  //   res.send("This is /about page.");
+  return next(new Error("Error in /about page please check.")); 
+});
+
+// Error handling
+app.use(function (err, req, res, next) {
+  console.log(err.stack);
+  res.status(500).send("SOmething went wrong..");
 });
 app.listen(3000);
