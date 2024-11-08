@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="/updateById/<%= user._id %>" method="post">
+        <h2>Update Post</h2>
+        <input type="text" value="<%= user.name %>" placeholder="name" name="name">
+        <input type="text" value="<%= user.image %>" placeholder="image" name="image">
+        <input type="submit" value="Change Post">
+
+    </form>
+</body>
+
+</html>

@@ -34,6 +34,22 @@ app.get("/deleteApost/:id", async function (req, res) {
   res.redirect("/allPosts");
 });
 
+// updateAPost
+app.get("/updateAPost/:id", async function (req, res) {
+  const { id } = req.params;
+  // await schemaOfUser.findOneAndUpdate({ _id: id });
+  let user = await schemaOfUser.findOne({ _id: id });
+  res.render("update", { user });
+});
+
+// updateAPost
+app.post("/updateById/:id", async function (req, res) {
+  const { id } = req.params;
+  const { name, image } = req.body;
+  await schemaOfUser.findOneAndUpdate({ _id: id }, { name, image });
+  res.redirect("/allPosts");
+});
+
 app.listen(3000, function () {
   console.log("Running on Port 3000");
 });
