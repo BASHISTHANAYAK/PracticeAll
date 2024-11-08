@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/styless/allposts.css">
+</head>
+
+<body>
+    allPosts
+    <!-- {name,image} -->
+    <div>
+        <div>
+            <a href="/">HOme</a>
+        </div>
+        <h2>allPosts </h2>
+        <% if(allPosts.length>0){ %>
+            <% allPosts.forEach((obj)=>{ %>
+                <section class="aPost">
+                    <h3>Name: <%= obj.name %>
+                    </h3>
+                    <h3>image: <%= obj.image %>
+                    </h3>
+                    <button><a href="/deleteApost/<%= obj.id %>">Delete</a></button>
+                </section>
+                <% }) %>
+                    <% } else{ %>
+                        <h5>Post is empty</h5>
+                        <% } %>
+
+    </div>
+</body>
+
+</html>

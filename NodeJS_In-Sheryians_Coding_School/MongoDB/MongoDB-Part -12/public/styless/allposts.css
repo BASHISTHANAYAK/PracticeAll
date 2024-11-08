@@ -1,0 +1,10 @@
+.aPost {
+  border: 1px solid;
+  display: inline-block;
+  min-width: 200px;
+}
+button {
+  background-color: red;
+  padding: 5px;
+  color: white;
+}
