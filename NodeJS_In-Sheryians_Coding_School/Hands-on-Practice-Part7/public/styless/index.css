@@ -5,4 +5,12 @@ textarea {
     height: 100px;  /* Fixed height */
     resize: vertical;
   }
-  
+  .aFolder{
+    border: 2px solid;
+    padding: 5px;
+    display: inline-block;
+    padding: 40px;
+  }
+  a{
+    cursor: pointer;
+  }

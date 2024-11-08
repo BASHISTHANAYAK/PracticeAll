@@ -29,7 +29,12 @@
       <h5>No tasks Here.</h5>
       <% } else { %>
         <% files.forEach((el)=>{ %>
-          <h1>some data</h1>
+          <div class="aFolder">
+            <%= el %>
+              <div>
+                <a href="/files/<%= el %>"> Readmore. </a>
+              </div>
+          </div>
           <% }) %>
             <% } %>
   </div>
