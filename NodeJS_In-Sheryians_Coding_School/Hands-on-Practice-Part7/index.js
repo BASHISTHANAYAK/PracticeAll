@@ -42,6 +42,28 @@ app.get("/files/:fileName", function (req, res) {
   });
 });
 
+app.get("/editFileName/:NameOfFile", function (req, res) {
+  res.render("editAFile", { fileName: req.params.NameOfFile });
+});
+
+// post for newName
+app.post("/newName", function (req, res) {
+  let { currentFileName, newFileName } = req.body;
+  console.log({ currentFileName, newFileName });
+  fs.rename(
+    `./files/${currentFileName}`,
+    `./files/${newFileName}`,
+    function (err) {
+      if (err) {
+        console.log("err-", err);
+      } else {
+        console.log("Rename complete!");
+        res.redirect("/");
+      }
+    }
+  );
+});
+
 app.listen(3000, function () {
   console.log("Hands-on-Practice-Part7 Running on port 3000..");
 });

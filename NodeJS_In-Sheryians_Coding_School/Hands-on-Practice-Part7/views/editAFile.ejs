@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <a href="/">Go back to Home</a>
+
+    File That we Want To Edit Is:- <%= fileName %>
+        <form action="/newName" method="post">
+            <input type="text" value=<%=fileName %> name="currentFileName">
+            <br>
+            <input type="text" placeholder="Change The file Name" name="newFileName">
+            <br>
+            <input type="submit" value="change name">
+        </form>
+</body>
+
+</html>

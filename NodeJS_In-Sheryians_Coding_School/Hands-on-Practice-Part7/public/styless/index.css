@@ -14,3 +14,6 @@ textarea {
   a{
     cursor: pointer;
   }
+  .EditFileName{
+    margin-top: 20px;
+  }

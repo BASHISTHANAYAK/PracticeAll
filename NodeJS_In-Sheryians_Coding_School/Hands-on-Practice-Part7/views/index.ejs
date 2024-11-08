@@ -28,12 +28,13 @@
     <% if(files.length==0){ %>
       <h5>No tasks Here.</h5>
       <% } else { %>
-        <% files.forEach((el)=>{ %>
+        <% files.forEach((fileName)=>{ %>
           <div class="aFolder">
-            <%= el %>
+            <%= fileName %>
               <div>
-                <a href="/files/<%= el %>"> Readmore. </a>
+                <a href="/files/<%= fileName %>"> Readmore. </a>
               </div>
+              <div class="EditFileName"><a href="/editFileName/<%= fileName %>">Edit file name</a></div>
           </div>
           <% }) %>
             <% } %>
