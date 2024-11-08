@@ -32,8 +32,7 @@ app.get("/updateAuser", async function (req, res) {
     { _id: "672e02e9da1bd30fa68c9fd0" },
     { phone: "46446" }
   );
-  console.log(AuserUpdate);
-  res.send(`${AuserUpdate["name"]} ,updated`);
+  res.send("updated");
 });
 
 app.get("/deleteAuser", async function (req, res) {
