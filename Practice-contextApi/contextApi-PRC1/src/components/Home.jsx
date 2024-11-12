@@ -1,9 +1,11 @@
-import { useContext } from "react";
+import { useContext, useRef } from "react";
 import { authoriseContext } from "../contextApi/createApi";
 
 const Home = () => {
+  const nameRef = useRef(null);
   console.log("Home Page");
-  const { isAuthorised, chnageAuthorise } = useContext(authoriseContext);
+  const { isAuthorised, chnageAuthorise, name, setName } =
+    useContext(authoriseContext);
 
   //logout
   function logout() {
@@ -22,10 +24,24 @@ const Home = () => {
       <h4>{isAuthorised ? "Authorized✅" : "NotAuthorized❌"}</h4>
       {isAuthorised ? (
         <div>
-          Welcome <button onClick={logout}>Logout</button>
+          <h3> Welcome {name && name}</h3>
+
+          <button onClick={logout}>Logout</button>
         </div>
       ) : (
-        <button onClick={authorise}>Authorise yourself.</button>
+        <>
+          <section>
+            <input type="text" ref={nameRef} />
+          </section>
+          <button
+            onClick={() => {
+              authorise();
+              setName(() => nameRef.current.value);
+            }}
+          >
+            Authorise yourself By Entering Name.
+          </button>
+        </>
       )}
     </div>
   );

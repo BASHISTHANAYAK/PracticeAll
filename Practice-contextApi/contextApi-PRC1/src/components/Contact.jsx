@@ -4,12 +4,14 @@ import { authoriseContext } from "../contextApi/createApi";
 const Contact = () => {
   console.log("Contact Page");
 
-  const { isAuthorised } = useContext(authoriseContext);
+  const { isAuthorised, name } = useContext(authoriseContext);
 
   return (
     <div>
       contact
-      <h3>{isAuthorised ? "Authorized" : "Not Authorized"}</h3>
+      <h3>
+        {isAuthorised ? `Authorized person Name is - ${name}` : "Not Authorized"}
+      </h3>
     </div>
   );
 };
