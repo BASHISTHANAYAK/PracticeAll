@@ -1,10 +1,12 @@
 import { useReducer } from "react";
+import { useDispatch } from "react-redux";
+import { actionsToDo } from "../redux/action";
 
 // Action type constants for clarity and maintainability
 const actionTypes = {
-  TODO_NAME: 'TODO_NAME',
-  TODO_DETAILS: 'TODO_DETAILS',
-  STATUS: 'STATUS',
+  TODO_NAME: "TODO_NAME",
+  TODO_DETAILS: "TODO_DETAILS",
+  STATUS: "STATUS",
 };
 
 const initialData = {
@@ -29,11 +31,11 @@ function reducer(state, action) {
 
 const Form = () => {
   const [state, dispatch] = useReducer(reducer, initialData);
-
+  const dispatchAction = useDispatch();
   // fillDetails function to handle form updates
   function fillDetails(event) {
     const { name, value } = event.target;
-    console.log({ name, value });
+    // console.log({ name, value });
 
     // Dispatch the action based on the input name
     if (name === "status") {
@@ -45,11 +47,21 @@ const Form = () => {
     }
   }
 
-  console.log(state);
+  // console.log(state);
+
+  //submitFrom
+  function submitFrom(event) {
+    event.preventDefault();
+    console.log("submitFrom");
+    dispatchAction({
+      type: actionsToDo.ADD_A_DATA,
+      payload: state,
+    });
+  }
 
   return (
     <div>
-      <form>
+      <form onSubmit={submitFrom}>
         <input
           type="text"
           name="todoName"
@@ -83,6 +95,8 @@ const Form = () => {
           value="incompleted"
         />{" "}
         Incompleted
+        <br />
+        <input type="submit" value="submit" />
       </form>
     </div>
   );
