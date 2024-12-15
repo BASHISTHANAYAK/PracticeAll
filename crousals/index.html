@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            border: 4px solid red;
+            width: 400px;
+            height: 400px;
+            display: flex;
+            gap: 5px;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        .container>img {
+            /* border: 1px solid blue; */
+            min-width: 100%;
+            height: 100%;
+            object-fit: cover;
+            flex: 0;
+        }
+
+
+
+
+        /* section */
+        section {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <img class="firstImg" src="https://via.placeholder.com/600x400.png?text=Image+1" alt="">
+        <img src="https://via.placeholder.com/600x400.png?text=Image+2" alt="">
+        <img src="https://via.placeholder.com/600x400.png?text=Image+3" alt="">
+        <img src="https://via.placeholder.com/600x400.png?text=Image+4" alt="">
+        <img src="https://via.placeholder.com/600x400.png?text=Image+5" alt="">
+    </div>
+    <section>
+        <button class="pre">
+            < </button>
+                <button class="next">
+                    >
+                </button>
+    </section>
+</body>
+
+</html>
+<script src="./index.js"></script>
